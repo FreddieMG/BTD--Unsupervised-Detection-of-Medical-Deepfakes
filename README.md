@@ -27,15 +27,7 @@ The test sets used in this repository are specifically curated to evaluate the p
 
 ### Provenance
 
-The MRI and CT scans used in this dataset were sourced from the following publicly available datasets:
-
-1. **Duke Breast Cancer MRI Dataset**
-   - The Duke Breast Cancer MRI dataset contains dynamic contrast-enhanced magnetic resonance images (DCE-MRI) of breast cancer patients with tumor locations. This dataset was used to create the MRI deepfake test set.
-   - [Link to Duke Breast Cancer MRI Dataset](https://www.cancerimagingarchive.net/collection/duke-breast-cancer-mri/)
-
-2. **LIDC-IDRI CT Dataset**
-   - The LIDC-IDRI (Lung Image Database Consortium and Image Database Resource Initiative) dataset contains lung CT scans with annotations for nodules, collected from multiple sources. This dataset was used to create the CT deepfake test set.
-   - [Link to LIDC-IDRI Dataset](https://wiki.cancerimagingarchive.net/pages/viewpage.action?pageId=1966254)
+The  MRI scans used in this dataset were sourced from **Duke Breast Cancer MRI Dataset** [found here](https://www.cancerimagingarchive.net/collection/duke-breast-cancer-mri/). The CT scans were sourced from  **LIDC-IDRI CT Dataset** [found here(https://wiki.cancerimagingarchive.net/pages/viewpage.action?pageId=1966254)
 
 ### Dataset Description
 
