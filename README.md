@@ -27,7 +27,7 @@ The test sets used in this repository are specifically curated to evaluate the p
 
 ### Provenance
 
-The  MRI scans used in this dataset were sourced from **Duke Breast Cancer MRI Dataset** [found here](https://www.cancerimagingarchive.net/collection/duke-breast-cancer-mri/). The CT scans were sourced from  **LIDC-IDRI CT Dataset** [found here(https://wiki.cancerimagingarchive.net/pages/viewpage.action?pageId=1966254)
+The  MRI scans used in this dataset were sourced from **Duke Breast Cancer MRI Dataset** [found here](https://www.cancerimagingarchive.net/collection/duke-breast-cancer-mri/). The CT scans were sourced from  **LIDC-IDRI CT Dataset** [found here](https://wiki.cancerimagingarchive.net/pages/viewpage.action?pageId=1966254)
 
 ### Dataset Description
 
