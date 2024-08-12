@@ -15,8 +15,12 @@ Recent advancements in generative AI have made it possible to create highly real
 
 BTD introduces a new paradigm in unsupervised anomaly detection for medical images. By reversing the diffusion process, BTD can identify subtle forensics left behind by generative models, even when these artifacts are not apparent to the human eye or conventional AI-based detectors.
 
+
 ## Methodology
 BTD operates by applying a backward diffusion process to a given image and measuring the residuals between the original and partially denoised image. The model is trained unsupervised on genuine medical images, making it adaptable to a variety of unseen deepfake technologies.
+
+*Overview of the Back-in-Time Diffusion framework.*
+![image](https://github.com/user-attachments/assets/ac42887b-27d7-401f-aed3-f3d4cc2f52d6)
 
 ### Key Features:
 - **Unsupervised Learning:** BTD does not require labeled datasets, making it practical for real-world applications.
