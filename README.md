@@ -9,6 +9,10 @@ BTD leverages the generative abilities of DDPMs in a reverse diffusion process t
 ## Introduction
 Recent advancements in generative AI have made it possible to create highly realistic deepfakes, raising significant concerns in the medical field. The proliferation of these technologies allows for the manipulation of medical images, posing threats such as false diagnoses and insurance fraud.
 
+*An illustration of the danger: slices from real medical scans (left) have tumors rejected into them or removed from (center).*
+![AI_tampering_showcase-1](https://github.com/user-attachments/assets/95613067-76b0-4c98-b77d-a211acb53e62)
+
+
 BTD introduces a new paradigm in unsupervised anomaly detection for medical images. By reversing the diffusion process, BTD can identify subtle forensics left behind by generative models, even when these artifacts are not apparent to the human eye or conventional AI-based detectors.
 
 ## Methodology
