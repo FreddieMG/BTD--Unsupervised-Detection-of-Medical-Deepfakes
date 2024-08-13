@@ -19,7 +19,7 @@ BTD introduces a new paradigm in unsupervised anomaly detection for medical imag
 ## Methodology
 BTD operates by applying a backward diffusion process to a given image and measuring the residuals between the original and partially denoised image. The model is trained unsupervised on genuine medical images, making it adaptable to a variety of unseen deepfake technologies.
 
-*Overview of the Back-in-Time Diffusion framework.*
+*Overview of the Back-in-Time Diffusion framework: On the left, the model architecture is depicted, where the U-Net predicts the noise added to the images during training. The center part shows the training process, where noise is progressively added to an image (x0) to create noisy versions (xt), and the model learns to predict the noise at each step. On the right, the detection process is outlined, where the model calculates the difference between the original image (x0) and the partially denoised image (x-1) after one reverse step, with the error serving as the detection signal.*
 ![image](https://github.com/user-attachments/assets/ac42887b-27d7-401f-aed3-f3d4cc2f52d6)
 
 ### Key Features:
