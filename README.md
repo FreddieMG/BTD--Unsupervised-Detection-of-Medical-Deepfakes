@@ -50,7 +50,7 @@ The test sets consist of both original and tampered images, where fake tumors we
 
 ## Model Weights
 
-Pretrained model weights for both CT and MRI models are available for download. These weights were trained using the Back-in-Time Diffusion (BTD) approach, specifically designed for detecting deepfakes in medical imaging.
+Pretrained model weights for both CT and MRI models are available for download. 
 
 ### Download Links:
 - **CT Model Weights:** [CT_model.pt](https://github.com/FreddieMG/BTD--Unsupervised-Detection-of-Medical-Deepfakes/releases/download/v1.0-weights/CT_model.pt)
