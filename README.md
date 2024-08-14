@@ -101,7 +101,7 @@ MRI_model.eval()
 ```
 
 ### BTD Evaluation Notebook
-For a ready-to-use evaluation of the Back-in-Time Diffusion (BTD) models on the provided test sets, please refer to the [BTD Evaluation Notebook](https://github.com/FreddieMG/BTD--Unsupervised-Detection-of-Medical-Deepfakes/tree/main).
+For a ready-to-use evaluation of the Back-in-Time Diffusion (BTD) models on the provided test sets, please refer to the [BTD Evaluation Notebook](https://colab.research.google.com/drive/1Dj2U8LjzkW0J4gs-E7HojjRF65O8_UkG).
 
 This notebook demonstrates how to:
 
