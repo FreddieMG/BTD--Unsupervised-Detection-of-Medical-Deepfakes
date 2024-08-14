@@ -98,5 +98,16 @@ MRI_model = GaussianDiffusion(
 
 MRI_model.load_state_dict(torch.load(MRI_weights)['model'])
 MRI_model.eval()
+```
 
+## Citation
+If you use this code, the pretrained models, or any of the provided datasets in your research, please cite our paper:
 
+```bibtex
+@article{grabovski2024back,
+  title={Back-in-Time Diffusion: Unsupervised Detection of Medical Deepfakes},
+  author={Grabovski, Fred and Yasur, Lior and Amit, Guy and Elovici, Yuval and Mirsky, Yisroel},
+  journal={arXiv preprint arXiv:2407.15169},
+  year={2024}
+}
+```
