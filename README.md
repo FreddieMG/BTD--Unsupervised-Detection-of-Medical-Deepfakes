@@ -105,7 +105,7 @@ For a ready-to-use evaluation of the Back-in-Time Diffusion (BTD) models on the 
 
 This notebook demonstrates how to:
 
-1. Load the test sets from the [Kaggle dataset](https://www.kaggle.com/datasets/freddiegraboski/btd-mri-and-ct-deepfake-test-sets\).
+1. Load the test sets from the [Kaggle dataset](https://www.kaggle.com/datasets/freddiegraboski/btd-mri-and-ct-deepfake-test-sets).
 2. Load the pretrained models.
 3. Evaluate the models on the test sets.
 
