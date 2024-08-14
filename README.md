@@ -45,7 +45,7 @@ The CT scans were sourced from **LIDC-IDRI CT Dataset** [found here](https://wik
 The test sets consist of both original and tampered images, where fake tumors were either injected into or removed from the scans. These manipulations were performed using advanced generative models such as CT-GAN and fine-tuned Stable Diffusion.
 
 - **CT Test Set:** Contains slices of lung CT scans with injected and removed tumors. The tampered images were generated using CT-GAN and fine-tuned Stable Diffusion models.
-- **MRI Test Set:** Contains breast MRI slices with injected and removed tumors. Similar to the CT set, the tampered images were generated using CT-GAN and fine-tuned Stable Diffusion models.
+- **MRI Test Set:** Contains breast MRI slices with injected and removed tumors. The tampered images were generated using fine-tuned Stable Diffusion models.
 
 
 ## Model Weights
