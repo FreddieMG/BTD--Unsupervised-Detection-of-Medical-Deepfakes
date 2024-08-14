@@ -101,11 +101,11 @@ MRI_model.eval()
 ```
 
 ### BTD Evaluation Notebook
-For a ready-to-use evaluation of the Back-in-Time Diffusion (BTD) models on the provided test sets, please refer to the \[BTD Evaluation Notebook\]\(https://github.com/FreddieMG/BTD--Unsupervised-Detection-of-Medical-Deepfakes/tree/main\).
+For a ready-to-use evaluation of the Back-in-Time Diffusion (BTD) models on the provided test sets, please refer to the [BTD Evaluation Notebook](https://github.com/FreddieMG/BTD--Unsupervised-Detection-of-Medical-Deepfakes/tree/main).
 
 This notebook demonstrates how to:
 
-1. Load the test sets from the \[Kaggle dataset\]\(https://www.kaggle.com/datasets/freddiegraboski/btd-mri-and-ct-deepfake-test-sets\).
+1. Load the test sets from the [Kaggle dataset](https://www.kaggle.com/datasets/freddiegraboski/btd-mri-and-ct-deepfake-test-sets\).
 2. Load the pretrained models.
 3. Evaluate the models on the test sets.
 
