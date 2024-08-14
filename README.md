@@ -5,6 +5,8 @@ Back-in-Time Diffusion (BTD) is a novel approach for detecting medical deepfakes
 
 BTD leverages the generative abilities of DDPMs in a reverse diffusion process to reveal synthetic content by analyzing residuals. This approach allows for robust detection of deepfakes in medical imagery, outperforming other state-of-the-art unsupervised detection methods.
 
+For more details, please see our paper: [Back-in-Time Diffusion: Unsupervised Detection of Medical Deepfakes](https://arxiv.org/pdf/2407.15169)
+
 
 ## Introduction
 Recent advancements in generative AI have made it possible to create highly realistic deepfakes, raising significant concerns in the medical field. The proliferation of these technologies allows for the manipulation of medical images, posing threats such as false diagnoses and insurance fraud.
