@@ -47,3 +47,56 @@ The test sets consist of both original and tampered images, where fake tumors we
 - **CT Test Set:** Contains slices of lung CT scans with injected and removed tumors. The tampered images were generated using CT-GAN and fine-tuned Stable Diffusion models.
 - **MRI Test Set:** Contains breast MRI slices with injected and removed tumors. Similar to the CT set, the tampered images were generated using CT-GAN and fine-tuned Stable Diffusion models.
 
+
+## Model Weights
+
+Pretrained model weights for both CT and MRI models are available for download. These weights were trained using the Back-in-Time Diffusion (BTD) approach, specifically designed for detecting deepfakes in medical imaging.
+
+### Download Links:
+- **CT Model Weights:** [CT_model.pt](https://github.com/FreddieMG/BTD--Unsupervised-Detection-of-Medical-Deepfakes/releases/download/v1.0-weights/CT_model.pt)
+- **MRI Model Weights:** [MRI_model.pt](https://github.com/FreddieMG/BTD--Unsupervised-Detection-of-Medical-Deepfakes/releases/download/v1.0-weights/MRI_model.pt)
+
+### Usage
+
+To load the pretrained weights in your project, you can use the following code:
+
+```python
+import torch
+from denoising_diffusion_pytorch import Unet, GaussianDiffusion
+
+# Load model weights from the release
+CT_weights = "path_to_downloaded/CT_model.pt"
+MRI_weights = "path_to_downloaded/MRI_model.pt"
+
+# Initialize the UNet model
+unet = Unet(
+    dim = 32,
+    dim_mults = (1, 2, 4, 8),
+    channels = 1
+)
+
+# Load CT model
+CT_model = GaussianDiffusion(
+    unet,
+    objective = "pred_noise",
+    image_size = 96,
+    timesteps = 1000,
+    sampling_timesteps = 250 
+).to('cuda' if torch.cuda.is_available() else 'cpu')
+
+CT_model.load_state_dict(torch.load(CT_weights)['model'])
+CT_model.eval()
+
+# Load MRI model
+MRI_model = GaussianDiffusion(
+    unet,
+    objective = "pred_noise",
+    image_size = 128,
+    timesteps = 1000,
+    sampling_timesteps = 250   
+).to('cuda' if torch.cuda.is_available() else 'cpu')
+
+MRI_model.load_state_dict(torch.load(MRI_weights)['model'])
+MRI_model.eval()
+
+
