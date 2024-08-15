@@ -68,8 +68,8 @@ from denoising_diffusion_pytorch import Unet, GaussianDiffusion
 CT_weights = "path_to_downloaded/CT_model.pt"
 MRI_weights = "path_to_downloaded/MRI_model.pt"
 
-# Initialize the UNet model
-unet = Unet(
+# Initialize the UNet model for CT
+CT_unet = Unet(
     dim = 32,
     dim_mults = (1, 2, 4, 8),
     channels = 1
@@ -77,7 +77,7 @@ unet = Unet(
 
 # Load CT model
 CT_model = GaussianDiffusion(
-    unet,
+    CT_unet,
     objective = "pred_noise",
     image_size = 96,
     timesteps = 1000,
@@ -87,9 +87,16 @@ CT_model = GaussianDiffusion(
 CT_model.load_state_dict(torch.load(CT_weights)['model'])
 CT_model.eval()
 
+# Initialize the UNet model for MRI
+MRI_unet = Unet(
+    dim = 32,
+    dim_mults = (1, 2, 4, 8),
+    channels = 1
+)
+
 # Load MRI model
 MRI_model = GaussianDiffusion(
-    unet,
+    MRI_unet,
     objective = "pred_noise",
     image_size = 128,
     timesteps = 1000,
