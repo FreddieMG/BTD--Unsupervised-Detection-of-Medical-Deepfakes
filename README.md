@@ -118,6 +118,105 @@ This notebook demonstrates how to:
 
 This notebook is a comprehensive example for users looking to quickly assess the performance of BTD on medical deepfake detection tasks.
 
+
+### Training
+#### MRI Training
+
+To train the BTD model on MRI data, use the `MRI_trainer.py` script. Before starting the training, ensure you have downloaded the MRI dataset from the following link:
+
+- **MRI Dataset Download:** [Download MRI Dataset](placeholder_link_for_MRI_dataset)
+
+#####  Usage:
+
+```python
+from denoising_diffusion_pytorch import Unet, GaussianDiffusion
+from Trainer_noisy import MRI_trainer
+
+# Initialize the UNet model
+model = Unet(
+    dim = 32,
+    dim_mults = (1, 2, 4, 8),
+    channels = 1
+)
+
+# Set up the diffusion process
+diffusion = GaussianDiffusion(
+    model,
+    image_size = 128,
+    objective = 'pred_noise',
+    timesteps = 1000,           # number of steps
+    sampling_timesteps = 250    # number of sampling timesteps (using ddim for faster inference [see citation for ddim paper])
+)
+
+# Initialize the trainer
+trainer = Trainer(
+    diffusion,
+    'path/to/MRI_images',
+    train_batch_size = 64,
+    train_lr = 8e-6,
+    train_num_steps = 700000,         # total training steps
+    gradient_accumulate_every = 2,    # gradient accumulation steps
+    ema_decay = 0.995,                # exponential moving average decay
+    #amp = True,                       # turn on mixed precision
+    calculate_fid = True,             # whether to calculate fid during training
+    save_and_sample_every = 20000,
+    results_folder = 'path/to/MRI/checkpoints'
+)
+
+# Start training
+trainer.train()
+```
+
+#### CT Training
+
+To train the BTD model on CT data, use the `CT_trainer.py` script. Make sure to download the CT dataset from the following link before beginning the training:
+
+- **CT Dataset Download:** [Download CT Dataset](placeholder_link_for_CT_dataset)
+
+##### Usage:
+
+```python
+from denoising_diffusion_pytorch import Unet, GaussianDiffusion
+from Trainer_noisy import CT_trainer
+
+# Initialize the UNet model
+model = Unet(
+    dim = 32,
+    dim_mults = (1, 2, 4, 8),
+    channels = 1
+)
+
+# Set up the diffusion process
+diffusion = GaussianDiffusion(
+    model,
+    image_size = 96,
+    objective = 'pred_noise',
+    timesteps = 1000,           # number of steps
+    sampling_timesteps = 250    # number of sampling timesteps (using ddim for faster inference [see citation for ddim paper])
+)
+
+# Initialize the trainer
+trainer = Trainer(
+    diffusion,
+    "path/to/CT_images",
+    train_batch_size = 64,
+    train_lr = 8e-6,
+    train_num_steps = 700000,         # total training steps
+    gradient_accumulate_every = 2,    # gradient accumulation steps
+    ema_decay = 0.995,                # exponential moving average decay
+    #amp = True,                       # turn on mixed precision
+    calculate_fid = True,             # whether to calculate fid during training
+    save_and_sample_every = 20000,
+    results_folder = 'path/to/CT/checkpoints'
+)
+
+# Start training
+trainer.train()
+```
+
+
+This setup will allow you to train the BTD models on MRI and CT datasets efficiently. The training process will save the model checkpoints at specified intervals.
+
 ## Citation
 If you use this code, the pretrained models, or any of the provided datasets in your research, please cite our paper:
 
