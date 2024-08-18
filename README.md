@@ -144,7 +144,7 @@ This notebook is a comprehensive example for users looking to quickly assess the
 
 To train the BTD model on MRI data, use the `MRI_trainer.py` script. Before starting the training, ensure you have downloaded the MRI dataset from the following link:
 
-- **MRI Dataset Download:** [Download MRI Dataset]([placeholder_link_for_MRI_dataset](https://postbguacil-my.sharepoint.com/:u:/g/personal/freddie_post_bgu_ac_il/ERZFCXqNNpFFr9QkBTq2n88B_IxJDeAaso11zOeK3kM_Lw?e=T44Kfo))
+- **MRI Dataset Download:** [Download MRI Dataset](https://postbguacil-my.sharepoint.com/:u:/g/personal/freddie_post_bgu_ac_il/ERZFCXqNNpFFr9QkBTq2n88B_IxJDeAaso11zOeK3kM_Lw?e=T44Kfo)
 
 #####  Usage:
 
