@@ -191,7 +191,7 @@ trainer.train()
 
 To train the BTD model on CT data, use the `CT_trainer.py` script. Make sure to download the CT dataset from the following link before beginning the training:
 
-- **CT Dataset Download:** [Download CT Dataset](placeholder_link_for_CT_dataset)
+- **CT Dataset Download:** [Download CT Dataset](https://postbguacil-my.sharepoint.com/:u:/g/personal/freddie_post_bgu_ac_il/ESZqJokjV_RGmb2NiI5IypEBRUY8ocS9DF0ZYkbVEkCHbA?e=th5O9a)
 
 ##### Usage:
 
