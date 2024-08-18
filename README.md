@@ -40,6 +40,11 @@ The test sets used in this repository are specifically curated to evaluate the p
 The  MRI scans used in this work were sourced from **Duke Breast Cancer MRI Dataset** [found here](https://www.cancerimagingarchive.net/collection/duke-breast-cancer-mri/). 
 The CT scans were sourced from **LIDC-IDRI CT Dataset** [found here](https://wiki.cancerimagingarchive.net/pages/viewpage.action?pageId=1966254).
 
+## BTD Code
+
+The BTD codebase provides the implementation of the Back-in-Time Diffusion (BTD) models for detecting deepfakes in medical images, including training scripts, pretrained model loading, and evaluation tools. Below, you'll find detailed instructions for training the models, loading pretrained weights, and evaluating their performance on MRI and CT datasets.
+
+
 ### Dataset Description
 
 The test sets consist of both original and tampered images, where fake tumors were either injected into or removed from the scans. These manipulations were performed using advanced generative models such as CT-GAN and fine-tuned Stable Diffusion.
