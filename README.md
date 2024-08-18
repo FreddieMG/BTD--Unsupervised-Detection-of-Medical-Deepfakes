@@ -35,6 +35,14 @@ The test sets used in this repository are specifically curated to evaluate the p
 
 - **Kaggle Dataset:** [BTD MRI and CT Deepfake Test Sets](https://www.kaggle.com/datasets/freddiegraboski/btd-mri-and-ct-deepfake-test-sets)
 
+### Dataset Description
+
+The test sets consist of both original and tampered images, where fake tumors were either injected into or removed from the scans. These manipulations were performed using advanced generative models such as CT-GAN and fine-tuned Stable Diffusion.
+
+- **CT Test Set:** Contains slices of lung CT scans with injected and removed tumors. The tampered images were generated using CT-GAN and fine-tuned Stable Diffusion models.
+- **MRI Test Set:** Contains breast MRI slices with injected and removed tumors. The tampered images were generated using fine-tuned Stable Diffusion models.
+
+
 ### Provenance
 
 The  MRI scans used in this work were sourced from **Duke Breast Cancer MRI Dataset** [found here](https://www.cancerimagingarchive.net/collection/duke-breast-cancer-mri/). 
@@ -43,14 +51,21 @@ The CT scans were sourced from **LIDC-IDRI CT Dataset** [found here](https://wik
 ## BTD Code
 
 The BTD codebase provides the implementation of the Back-in-Time Diffusion (BTD) models for detecting deepfakes in medical images, including training scripts, pretrained model loading, and evaluation tools. Below, you'll find detailed instructions for training the models, loading pretrained weights, and evaluating their performance on MRI and CT datasets.
+## Implementation Notes:
 
+- Tested on an RTX 4090 GPU with 24GB VRAM for training and evaluation of BTD.
+- Tested on a Linux system with 125GB RAM and Intel Xeon E5-1650 v4 CPU (12 cores).
+- Tested using Anaconda 2023.03 with Python 3.10.6, PyTorch 2.0, and CUDA 11.8.
 
-### Dataset Description
+### Python Dependencies:
+- Common in most installations: `math`, `copy`, `pathlib`, `random`, `functools`, `collections`, `multiprocessing`, `os`
+- What you may need to install: `torch`, `einops`, `pillow`, `tqdm`, `ema-pytorch`, `accelerate`, `numpy`, `pytorch-fid`, `pandas`, `denoising_diffusion_pytorch`
 
-The test sets consist of both original and tampered images, where fake tumors were either injected into or removed from the scans. These manipulations were performed using advanced generative models such as CT-GAN and fine-tuned Stable Diffusion.
+To install the dependencies, run this in the terminal:
 
-- **CT Test Set:** Contains slices of lung CT scans with injected and removed tumors. The tampered images were generated using CT-GAN and fine-tuned Stable Diffusion models.
-- **MRI Test Set:** Contains breast MRI slices with injected and removed tumors. The tampered images were generated using fine-tuned Stable Diffusion models.
+```bash
+pip install torch torchvision einops pillow tqdm ema-pytorch accelerate numpy pytorch-fid pandas denoising_diffusion_pytorch
+```
 
 
 ### Model Weights
@@ -129,7 +144,7 @@ This notebook is a comprehensive example for users looking to quickly assess the
 
 To train the BTD model on MRI data, use the `MRI_trainer.py` script. Before starting the training, ensure you have downloaded the MRI dataset from the following link:
 
-- **MRI Dataset Download:** [Download MRI Dataset](placeholder_link_for_MRI_dataset)
+- **MRI Dataset Download:** [Download MRI Dataset]([placeholder_link_for_MRI_dataset](https://postbguacil-my.sharepoint.com/:u:/g/personal/freddie_post_bgu_ac_il/ERZFCXqNNpFFr9QkBTq2n88B_IxJDeAaso11zOeK3kM_Lw?e=T44Kfo))
 
 #####  Usage:
 
