@@ -48,11 +48,11 @@ The test sets consist of both original and tampered images, where fake tumors we
 - **MRI Test Set:** Contains breast MRI slices with injected and removed tumors. The tampered images were generated using fine-tuned Stable Diffusion models.
 
 
-## Model Weights
+### Model Weights
 
 Pretrained model weights for both CT and MRI models are available for download. 
 
-### Download Links:
+#### Download Links:
 - **CT Model Weights:** [CT_model.pt](https://github.com/FreddieMG/BTD--Unsupervised-Detection-of-Medical-Deepfakes/releases/download/v1.0-weights/CT_model.pt)
 - **MRI Model Weights:** [MRI_model.pt](https://github.com/FreddieMG/BTD--Unsupervised-Detection-of-Medical-Deepfakes/releases/download/v1.0-weights/MRI_model.pt)
 
