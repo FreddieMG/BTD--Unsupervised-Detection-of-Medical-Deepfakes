@@ -57,14 +57,14 @@ The BTD codebase provides the implementation of the Back-in-Time Diffusion (BTD)
 - Tested on a Linux system with 125GB RAM and Intel Xeon E5-1650 v4 CPU (12 cores).
 - Tested using Anaconda 2023.03 with Python 3.10.6, PyTorch 2.0, and CUDA 11.8.
 
-### Python Dependencies:
-- Common in most installations: `math`, `copy`, `pathlib`, `random`, `functools`, `collections`, `multiprocessing`, `os`
-- What you may need to install: `torch`, `einops`, `pillow`, `tqdm`, `ema-pytorch`, `accelerate`, `numpy`, `pytorch-fid`, `pandas`, `denoising_diffusion_pytorch`
+### Python dependencies:
+  - Common in most installations: `numpy`, `tqdm`, `pillow`
+  - What you may need to install: `torch`, `einops`, `ema-pytorch`, `accelerate`, `pytorch-fid`, `pandas`, `denoising_diffusion_pytorch==1.8.3`
 
 To install the dependencies, run this in the terminal:
 
 ```bash
-pip install torch torchvision einops pillow tqdm ema-pytorch accelerate numpy pytorch-fid pandas denoising_diffusion_pytorch
+pip install torch torchvision einops pillow tqdm ema-pytorch accelerate numpy pytorch-fid pandas denoising_diffusion_pytorch==1.8.3
 ```
 
 
