@@ -54,8 +54,8 @@ The BTD codebase provides the implementation of the Back-in-Time Diffusion (BTD)
 ## Implementation Notes:
 
 - Tested on an RTX 4090 GPU with 24GB VRAM for training and evaluation of BTD.
-- Tested on a Linux system with 125GB RAM and Intel Xeon E5-1650 v4 CPU (12 cores).
-- Tested using Anaconda 2023.03 with Python 3.10.6, PyTorch 2.0, and CUDA 11.8.
+- Tested on a Linux system with 128GB RAM and Intel Xeon E5-1650 v4 CPU (12 cores).
+- Tested using Anaconda 2023.03 with Python 3.10.6, PyTorch 2.0, and CUDA 12.4.
 
 ### Python dependencies:
   - Common in most installations: `numpy`, `tqdm`, `pillow`
