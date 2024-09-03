@@ -150,7 +150,7 @@ To train the BTD model on MRI data, use the `MRI_trainer.py` script. Before star
 
 ```python
 from denoising_diffusion_pytorch import Unet, GaussianDiffusion
-from Trainer_noisy import MRI_trainer
+from MRI_trainer import Trainer
 
 # Initialize the UNet model
 model = Unet(
@@ -197,7 +197,7 @@ To train the BTD model on CT data, use the `CT_trainer.py` script. Make sure to 
 
 ```python
 from denoising_diffusion_pytorch import Unet, GaussianDiffusion
-from Trainer_noisy import CT_trainer
+from CT_trainer import Trainer
 
 # Initialize the UNet model
 model = Unet(
