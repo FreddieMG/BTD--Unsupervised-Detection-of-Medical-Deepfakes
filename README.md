@@ -14,7 +14,6 @@ Recent advancements in generative AI have made it possible to create highly real
 *An illustration of the danger: slices from real medical scans (left) have tumors rejected into them or removed from (center).*
 ![AI_tampering_showcase-1](github.com/user-attachments/assets/95613067-76b0-4c98-b77d-a211acb53e62)
 
-
 BTD introduces a new paradigm in unsupervised anomaly detection for medical images. By reversing the diffusion process, BTD can identify subtle forensics left behind by generative models, even when these artifacts are not apparent to the human eye or conventional AI-based detectors.
 
 
