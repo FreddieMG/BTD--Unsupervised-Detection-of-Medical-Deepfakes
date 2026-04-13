@@ -635,7 +635,7 @@ class GaussianDiffusion(nn.Module):
         b, *_, device = *x.shape, self.device
         batched_times = torch.full((b,), t, device = device, dtype = torch.long)
         model_mean, _, model_log_variance, x_start = self.p_mean_variance(x = x, t = batched_times, x_self_cond = x_self_cond, clip_denoised = True)
- = torch.randn_like(x) if t > 0 else 0. # no noise if t == 0
+        noise = torch.randn_like(x) if t > 0 else 0. # no noise if t == 0
         pred_img = model_mean + (0.5 * model_log_variance).exp() * noise
         return pred_img, x_start
 
@@ -793,7 +793,7 @@ class GaussianDiffusion(nn.Module):
 
 
 class Dataset(Dataset):
-    def __init__(self):
+    def __init__(self,folder):
         df_train = pd.read_csv(os.path.join(folder, 'train_csv.csv'))
         df_train.reset_index(inplace=True, drop=True)
         df_train.drop(df_train.tail(1).index, inplace=True)
@@ -939,7 +939,7 @@ class Trainer(object):
 
         # dataset and dataloader
 
-        self.ds = Dataset()
+        self.ds = Dataset(folder)
         dl = DataLoader(self.ds, batch_size = train_batch_size, shuffle = True, pin_memory = True, num_workers = 6)
 
         dl = self.accelerator.prepare(dl)
